@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Javascript Exercice 4</title>
+</head>
+<body>
+  <form>
+    <label for="password">Votre mot de passe : </label><input type="text" name="password" id="password" />
+    <label for="confirmPassword">Confirmez : </label><input type="text" name="confirmPassword" id="confirmPassword" />
+    <button type="button" name="button" onclick="checkFilled();">Vérification</button>
+  </form>
+  <script>
+  function checkFilled() {
+    // Déclaration des variables
+    var password = document.getElementById('password');
+    var confirmPassword = document.getElementById('confirmPassword');
+    // Vérifie que les valeurs des inputs correspondent
+    if (password.value == confirmPassword.value) {
+      // Si les valeurs correspondent, change la couleur des backgrounds des 2 inputs en vert
+      password.style.borderColor = 'green';
+      confirmPassword.style.borderColor = 'green';
+    } else {
+      // Si les valeurs ne correspondent pas, chnage la couleur des backgrounds des 2 inputs en rouge
+      password.style.borderColor = 'red';
+      confirmPassword.style.borderColor = 'red';
+    }
+  }
+  </script>
+</body>
+</html>
